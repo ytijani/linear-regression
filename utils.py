@@ -1,5 +1,7 @@
 
+import csv
 
+from constants import DATA_FILE, MILEAGE_KEY, PRICE_KEY
 
 
 def estimate_price(mileage: float, theta0: float, theta1: float) -> float:
@@ -40,3 +42,16 @@ def reverse_z_score(value, values_mean, values_std):
 def normalize(values):
     normalized, _, _ = fit_z_score(values)
     return normalized
+
+
+
+def read_data(filename=DATA_FILE):
+   
+    mileage = []
+    prices = []
+    with open(filename, newline="") as csvfile:
+        for row in csv.DictReader(csvfile):
+            mileage.append(float(row[MILEAGE_KEY]))
+            prices.append(float(row[PRICE_KEY]))
+    return mileage, prices
+

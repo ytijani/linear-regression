@@ -1,6 +1,7 @@
 THETA0=0
 THETA1=0
 DATA_FILE="./data/data.csv"
+MODEL_FILE = "model_parameters.json"
 MILEAGE_KEY="km"
 PRICE_KEY="price"
 LEARNING_RATE=0.1
