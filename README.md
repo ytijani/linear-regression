@@ -61,6 +61,8 @@ python3 visualization.py
 
 This displays two graphs side by side: the original mileage and price values, and their z-score scaled values. Both graphs show the data points and regression line. The visualization also displays the model's R² score and saves the graph to `regression.png`.
 
+![Original and z-score scaled car price regression graphs](regression.png)
+
 ## Evaluate the model
 
 After training, run:
